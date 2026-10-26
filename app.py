@@ -1,22 +1,3 @@
-import os
-import uuid
-import subprocess
-from pathlib import Path
-
-import requests
-from flask import Flask, request, jsonify, send_file
-
-app = Flask(__name__)
-BASE = Path("/tmp/realsoultoon")
-BASE.mkdir(parents=True, exist_ok=True)
-
-
-@app.get("/")
-def home():
-    return jsonify({
-        "app": "RealSoulToon",
-        "status": "running"
-    })
 
 
 @app.post("/make-video")
